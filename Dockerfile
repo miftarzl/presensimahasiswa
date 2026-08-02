@@ -28,7 +28,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy existing application code
 COPY . /var/www/html
 
-# Install Composer dependencies (skip scripts to avoid route file check during build)
+# Install Composer dependencies
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader --no-scripts
 
 # Ensure storage & bootstrap/cache directories exist before setting permissions
@@ -42,4 +42,4 @@ RUN mkdir -p /var/www/html/storage/framework/sessions \
 
 EXPOSE 80
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=80"]
+CMD ["sh", "-c", "php artisan key:generate --force && php artisan serve --host=0.0.0.0 --port=80"]
