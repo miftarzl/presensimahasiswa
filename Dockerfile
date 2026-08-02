@@ -24,8 +24,11 @@ WORKDIR /var/www
 # Copy existing application directory
 COPY . /var/www
 
+# Install Composer dependencies
+RUN composer install --no-interaction --optimize-autoloader --no-dev || composer install --no-interaction
+
 # Set permissions
-RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
+RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache /var/www/vendor
 
 EXPOSE 9000
 CMD ["php-fpm"]
