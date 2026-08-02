@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # Container Web Application Laravel (Port Host 8093 -> Container Port 80)
   web:
