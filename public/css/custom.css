@@ -1,0 +1,476 @@
+/* =======================================
+        GUNADARMA MODERN UI
+======================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:
+    linear-gradient(135deg,#F7F5FF,#EEF2FF,#F8FAFF);
+}
+
+/* =========================
+        HEADER
+========================= */
+
+.header{
+
+    background:rgba(255,255,255,.85)!important;
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid #ECE8FF;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+}
+
+.header-content{
+    min-height:70px !important;
+    padding:0 25px !important;
+}
+
+.navbar{
+    min-height:70px !important;
+}
+
+/* =========================
+        SIDEBAR
+========================= */
+
+.nav-header{
+
+    background:linear-gradient(
+    180deg,
+    #41258F,
+    #5B3CC4)!important;
+}
+
+.dlabnav{
+
+    background:
+    linear-gradient(
+    180deg,
+    #41258F 0%,
+    #5B3CC4 50%,
+    #7C5EF4 100%)!important;
+
+    box-shadow:
+    10px 0 35px rgba(53,29,128,.18);
+}
+
+/* efek background */
+
+.dlabnav::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at bottom left,
+
+    rgba(255,255,255,.08),
+
+    transparent 60%);
+}
+
+/* =========================
+      LOGO
+========================= */
+
+.brand-logo{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+/* =========================
+        MENU
+========================= */
+
+.metismenu{
+
+    padding-top:0px;
+}
+
+.metismenu li{
+
+    margin:8px 14px;
+}
+
+.metismenu li a{
+
+    border-radius:14px;
+
+    color:white!important;
+
+    padding:15px 18px;
+
+    transition:.35s;
+}
+
+.metismenu li a:hover{
+
+    background:rgba(255,255,255,.15);
+
+    transform:translateX(5px);
+}
+
+.metismenu li.mm-active>a{
+
+    background:white!important;
+
+    color:#4B2EA7!important;
+
+    box-shadow:
+
+    0 12px 30px rgba(0,0,0,.12);
+}
+
+.metismenu li.mm-active i{
+
+    color:#4B2EA7!important;
+}
+
+/* =========================
+        COPYRIGHT
+========================= */
+
+.copyright{
+
+    color:white!important;
+
+    opacity:.9;
+}
+
+/* =========================
+       CONTENT
+========================= */
+
+.content-body{
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #F8F8FF,
+
+    #EEF2FF);
+}
+
+/* =========================
+         CARD
+========================= */
+
+.card{
+
+    border:none!important;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+    margin-bottom:20px;
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+}
+
+/* =========================
+     ICON CARD
+========================= */
+
+.icon-box{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:20px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #6B4EF5,
+
+    #8F7AFF)!important;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.icon-box i{
+
+    font-size:28px;
+
+    color:white;
+}
+
+/* =========================
+       TABLE
+========================= */
+
+.table thead{
+
+    background:#F3EFFF;
+}
+
+.table thead th{
+
+    color:#4B2EA7;
+
+    font-weight:600;
+
+    border:none;
+}
+
+.table tbody tr:hover{
+
+    background:#F8F5FF;
+}
+
+/* =========================
+       BUTTON
+========================= */
+
+.btn{
+
+    border-radius:12px;
+}
+
+/* =========================
+      CALENDAR
+========================= */
+
+.fc-toolbar-title{
+
+    color:#432D99;
+
+    font-weight:700;
+}
+
+.fc-button{
+
+    background:#5B3CC4!important;
+
+    border:none!important;
+
+    border-radius:10px!important;
+}
+
+.fc-day-today{
+
+    background:#EDE6FF!important;
+}
+
+/* ======== GRID PRESENSI ======== */
+
+.presensi-card{
+
+    border:none;
+
+    border-radius:18px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    height:100%;
+}
+
+.presensi-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.presensi-card .card-body{
+
+    padding:28px;
+
+}
+
+.row.g-4{
+
+    --bs-gutter-x:28px;
+
+    --bs-gutter-y:28px;
+
+}
+
+.presensi-card .card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.presensi-card .btn{
+
+    margin-top:auto;
+
+}
+
+.content-body{
+
+    padding:30px;
+
+}
+
+/* ===========================
+   CARD PRESENSI
+=========================== */
+
+.presensi-card{
+
+    border:none;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.presensi-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 35px rgba(91,60,196,.18);
+
+}
+
+.presensi-card .card-body{
+
+    padding:28px;
+
+}
+
+.info-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:12px;
+
+    font-size:15px;
+
+}
+
+.info-item i{
+
+    width:24px;
+
+    font-size:18px;
+
+    margin-top:3px;
+
+}
+
+.presensi-card .btn{
+
+    border-radius:12px;
+
+}
+
+.badge{
+
+    border-radius:10px;
+
+    padding:8px 14px;
+
+}
+
+/* ===========================
+   JARAK HEADER KE CONTENT
+=========================== */
+
+.dashboard_bar{
+
+    margin-bottom:0 !important;
+
+    padding-bottom:0 !important;
+
+    font-size:20px;
+
+    font-weight:700;
+}
+
+
+
+.page-titles{
+
+    margin-bottom:20px !important;
+
+    padding:10px 0 !important;
+
+}
+
+.content-body .container-fluid{
+
+    padding-top:10px !important;
+
+}
+
+/* ===========================
+   FIX SIDEBAR & HEADER
+=========================== */
+
+.nav-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 80px;
+    z-index: 999;
+}
+
+.dlabnav{
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 240px;
+    right: 0;
+    z-index: 998;
+}
+
+.content-body{
+    margin-left:240px;
+    margin-top:80px;
+}

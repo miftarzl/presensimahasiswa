@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  # Container Web Application Laravel (Port Host 8093 -> Container Port 80)
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: presensi-web
+    restart: unless-stopped
+    ports:
+      - "8093:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+    depends_on:
+      - db
+    networks:
+      - presensi-network
+
+  # Container Database MySQL (Port Host 3090 -> Container Port 3306)
+  db:
+    image: mysql:8.0
+    container_name: presensi-db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-absensi_db_amel}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-root}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-root}
+      MYSQL_USER: ${DB_USERNAME:-root}
+    ports:
+      - "3090:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - presensi-network
+
+networks:
+  presensi-network:
+    driver: bridge
+
+volumes:
+  dbdata:
+    driver: local
