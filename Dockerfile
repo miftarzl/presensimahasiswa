@@ -28,8 +28,8 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Copy existing application code
 COPY . /var/www/html
 
-# Install Composer dependencies automatically inside image build
-RUN composer install --no-interaction --prefer-dist --optimize-autoloader
+# Install Composer dependencies (skip scripts to avoid route file check during build)
+RUN composer install --no-interaction --prefer-dist --optimize-autoloader --no-scripts
 
 # Ensure storage & bootstrap/cache directories exist before setting permissions
 RUN mkdir -p /var/www/html/storage/framework/sessions \
