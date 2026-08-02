@@ -40,7 +40,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "3040:3306"
+      - "3041:3306"
     environment:
       MYSQL_DATABASE: absensi_db
       MYSQL_ROOT_PASSWORD: secretpassword
